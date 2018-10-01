@@ -1,0 +1,8 @@
+name: ServerSystem
+version: 1.0
+author: Justix
+main: net.dev.serversystem.main.Main
+
+commands:
+      vanish:
+        aliases: [v]
