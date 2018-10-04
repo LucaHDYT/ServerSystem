@@ -6,16 +6,23 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
+import net.dev.serversystem.utils.DataFileUtils;
 import net.dev.serversystem.utils.Utils;
 
-public class VanishListener implements Listener {
+public class JoinQuitListener implements Listener {
 
 	@EventHandler
 	public void onJoin(PlayerJoinEvent e) {
 		Player p = e.getPlayer();
+		String path = "MessageReceives." + p.getUniqueId();
 		
 		if(!(p.hasPermission("system.vanish.bypass")))
 			Utils.vanished.forEach(vanished -> p.hidePlayer(vanished));
+		
+		if(!(DataFileUtils.cfg.contains(path))) {
+			DataFileUtils.cfg.set(path, true);
+			DataFileUtils.saveFile();
+		}
 	}
 	
 	@EventHandler

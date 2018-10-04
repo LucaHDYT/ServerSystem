@@ -40,6 +40,17 @@ public class FileUtils {
 		cfg.addDefault("Messages.Vanish.Disabled", "&7Vanish for the player &e%player% &7has been &cdisabled");
 		cfg.addDefault("Messages.Vanish.Self.Enabled", "&7You are now in vanish");
 		cfg.addDefault("Messages.Vanish.Self.Disabled", "&7You are no longer in vanish");
+		cfg.addDefault("Messages.MSG.Self", "&eMe &8» &e%player%&7: &r%message%");
+		cfg.addDefault("Messages.MSG.Other", "&e%player% &8» &eMe&7: &r%message%");
+		cfg.addDefault("Messages.MSG.Enabled", "&7You can now receive messages");
+		cfg.addDefault("Messages.MSG.Disabled", "&7You can no longer receive any messages");
+		cfg.addDefault("Messages.MSG.NotGettingMessages", "&7The player &e%player% &7does not receive any messages");
+		cfg.addDefault("Messages.MSG.Help", "&e/msg «player» «message» &7or &e/msg toggle");
+		cfg.addDefault("Messages.MSG.CanNotInteractWithSelf", "&7You can't send yourself a message");
+		cfg.addDefault("Messages.Reply.GotNoMessages", "&7You haven't got any messages");
+		cfg.addDefault("Messages.Reply.Help", "&e/r «message»");
+		cfg.addDefault("Messages.Rand.NotYourPlot", "&7This plot does not belong to you");
+		cfg.addDefault("Messages.Rand.Changed", "&7Your plot border was updated");
 		cfg.options().copyDefaults(true);
 		saveFile();
 	}

@@ -6,3 +6,6 @@ main: net.dev.serversystem.main.Main
 commands:
       vanish:
         aliases: [v]
+      msg:
+      r:
+      rand:

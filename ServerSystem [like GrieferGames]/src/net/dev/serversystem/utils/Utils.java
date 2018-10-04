@@ -1,6 +1,7 @@
 package net.dev.serversystem.utils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -12,7 +13,8 @@ public class Utils {
 
 	public static String prefix;
 	public static ArrayList<Player> vanished = new ArrayList<>();
-
+	public static HashMap<Player, Player> chats = new HashMap<>();
+	
 	public static void sendConsole(String msg) {
 		Bukkit.getConsoleSender().sendMessage(prefix + msg);
 	}
