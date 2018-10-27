@@ -51,6 +51,8 @@ public class FileUtils {
 		cfg.addDefault("Messages.Reply.Help", "&e/r «message»");
 		cfg.addDefault("Messages.Rand.NotYourPlot", "&7This plot does not belong to you");
 		cfg.addDefault("Messages.Rand.Changed", "&7Your plot border was updated");
+		cfg.addDefault("Messages.Rand.NoPerm", "&cYou do not have permission for this kind of border block");
+		cfg.addDefault("Settings.RandInventory.Title", "&8» &eWähle deinen Rand:");
 		cfg.options().copyDefaults(true);
 		saveFile();
 	}
