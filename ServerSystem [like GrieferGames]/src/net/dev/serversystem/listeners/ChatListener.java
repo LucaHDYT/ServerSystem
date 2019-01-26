@@ -11,7 +11,10 @@ public class ChatListener implements Listener {
 	public void onChat(AsyncPlayerChatEvent e) {
 		Player p = e.getPlayer();
 		
+		if(p.hasPermission("system.coloredchat"))
+			e.setMessage(e.getMessage().replace("&", "§"));
 		
+		e.setFormat(p.getDisplayName() + "§7: §r" + e.getMessage());
 	}
 	
 }

@@ -13,6 +13,7 @@ import net.dev.serversystem.listeners.InventoryClickListener;
 import net.dev.serversystem.listeners.JoinQuitListener;
 import net.dev.serversystem.utils.DataFileUtils;
 import net.dev.serversystem.utils.FileUtils;
+import net.dev.serversystem.utils.ScoreboardUtils;
 import net.dev.serversystem.utils.Utils;
 
 public class Main extends JavaPlugin {
@@ -31,6 +32,14 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new JoinQuitListener(), this);
 		pm.registerEvents(new ChatListener(), this);
 		pm.registerEvents(new InventoryClickListener(), this);
+		
+		Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
+			
+			@Override
+			public void run() {
+				Bukkit.getOnlinePlayers().forEach(all -> ScoreboardUtils.setScoreboard(all));
+			}
+		}, 20, 20);
 		
 		Utils.sendConsole("§7The system has been§8: §aENABLED");
 	}

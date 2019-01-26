@@ -7,6 +7,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 import net.dev.serversystem.utils.DataFileUtils;
+import net.dev.serversystem.utils.ScoreboardUtils;
 import net.dev.serversystem.utils.Utils;
 
 public class JoinQuitListener implements Listener {
@@ -31,6 +32,9 @@ public class JoinQuitListener implements Listener {
 		
 		if(Utils.vanished.contains(p))
 			Utils.vanished.remove(p);
+		
+		if(ScoreboardUtils.scoreboards.containsKey(p.getName()))
+			ScoreboardUtils.scoreboards.remove(p.getName());
 	}
 	
 }
