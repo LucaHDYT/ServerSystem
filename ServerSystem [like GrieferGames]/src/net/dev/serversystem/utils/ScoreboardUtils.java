@@ -59,7 +59,7 @@ public class ScoreboardUtils {
 			
 			registerNewTeam(sb, "§c", "§c", "§c", "§c");
 			o.getScore("§c").setScore(1);
-			
+
 			registerNewRankedTeam(sb, "000Owner", "§4Owner §7| §4", "", "system.owner");
 			registerNewRankedTeam(sb, "001Admin", "§4Admin §7| §4", "", "system.admin");
 			registerNewRankedTeam(sb, "002Dev", "§bDev §7| §b", "", "system.dev");
