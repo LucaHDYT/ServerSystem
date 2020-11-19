@@ -1,7 +1,7 @@
 name: ServerSystem
 version: 1.0
-author: Justix
-main: net.dev.serversystem.main.Main
+author: LucaHD_YT
+main: de.lucahdyt.serversystem.main.Main
 
 commands:
       vanish:
